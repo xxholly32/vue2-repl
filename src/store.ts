@@ -75,6 +75,7 @@ export interface Store {
   getImportMap: () => any
   initialShowOutput: boolean
   initialOutputMode: OutputModes
+  sfcUrl?: string
 }
 
 export interface StoreOptions {

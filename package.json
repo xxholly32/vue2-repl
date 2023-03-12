@@ -1,6 +1,6 @@
 {
   "name": "@xxholly32/vue2-repl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue component for editing Vue 2 components",
   "main": "dist/ssr-stub.js",
   "module": "dist/vue-repl.js",
@@ -20,19 +20,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build-types": "vue-tsc -p tsconfig.build.json && api-extractor run -c api-extractor.json && rimraf dist/src",
-    "prepublishOnly": "npm run build && npm run build-types"
+    "build-types": "vue-tsc -p tsconfig.build.json && api-extractor run -c api-extractor.json && rimraf dist/src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vuejs/repl.git"
-  },
-  "author": "Evan You",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vuejs/repl/issues"
-  },
-  "homepage": "https://github.com/vuejs/repl#readme",
   "dependencies": {
     "axios": "^0.27.2"
   },
@@ -56,5 +46,8 @@
   },
   "peerDependencies": {
     "vue": "^3.2.13"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

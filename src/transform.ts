@@ -19,8 +19,8 @@ async function transformTS(src: string) {
   }).code
 }
 
-export async function defaultCompiler(code: string, filename: string, sourceMap = false) {
-  return await axios.post('http://url/parse', {
+export async function defaultCompiler(code: string, filename: string, sourceMap = false, sfcUrl = 'https://vue2-compiler-sfc-server-main.vercel.app/parse') {
+  return await axios.post(sfcUrl, {
     source: code,
     filename,
     sourceMap

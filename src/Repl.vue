@@ -14,6 +14,7 @@ export interface Props {
   sfcOptions?: SFCOptions
   layout?: string
   ssr?: boolean
+  sfcUrl?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -25,6 +26,7 @@ const props = withDefaults(defineProps<Props>(), {
   ssr: false
 })
 
+props.store.sfcUrl = props.sfcUrl
 props.store.options = props.sfcOptions
 props.store.init()
 
